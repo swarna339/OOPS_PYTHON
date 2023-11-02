@@ -1,11 +1,8 @@
-from abc import ABC 
-class shape:
+from abc import ABC,abstractmethod
+class shape(ABC):
+    @abstractmethod
     def area(self):
         pass
-
-class rectangle:
-    def area(self,a,b):
-        print("rectangle area is:",a*b)
     
 class circle(shape):
     def area(self,a):
@@ -18,13 +15,6 @@ class triangle(shape):
 class square(shape):
     def area(self,a):
         print("square area:",a*a);
-    
-
-s=shape()
-s.area()
-
-r=rectangle()
-r.area(2,4)
 
 t=triangle()
 t.area(4,2)
